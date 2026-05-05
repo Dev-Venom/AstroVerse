@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+:root {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.stars,
+.stars2,
+.stars3 {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.stars::after,
+.stars2::after,
+.stars3::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: repeat;
+}
+
+.stars::after {
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, white, transparent),
+    radial-gradient(2px 2px at 40px 70px, white, transparent),
+    radial-gradient(1px 1px at 90px 40px, white, transparent),
+    radial-gradient(2px 2px at 130px 80px, white, transparent);
+
+  background-size: 200px 200px;
+
+  animation: moveStars 80s linear infinite;
+  opacity: 0.6;
+}
+
+.stars2::after {
+  background-image:
+    radial-gradient(1px 1px at 50px 50px, #8ab4ff, transparent),
+    radial-gradient(2px 2px at 100px 150px, white, transparent),
+    radial-gradient(1px 1px at 200px 100px, #c084fc, transparent);
+
+  background-size: 300px 300px;
+
+  animation: moveStars 120s linear infinite;
+  opacity: 0.4;
+}
+
+.stars3::after {
+  background-image:
+    radial-gradient(2px 2px at 150px 120px, white, transparent),
+    radial-gradient(1px 1px at 250px 200px, #60a5fa, transparent);
+
+  background-size: 400px 400px;
+
+  animation: moveStars 160s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes moveStars {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-500px);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+htm{
+  scroll-behavior: smooth;
+}
