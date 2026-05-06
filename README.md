@@ -65,7 +65,7 @@ Used for:
 
 ---
 
-## 🎬 Animation & Motion
+##  Animation & Motion
 
 ### Framer Motion
 Used to create:
