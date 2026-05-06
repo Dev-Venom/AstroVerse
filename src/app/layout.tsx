@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Interstellar ",
+  title: "Astro",
   description: "We used to look up at the sky Wondering about our place in the Stars",
 };
 
