@@ -53,7 +53,7 @@ export default function BackgroundMusic() {
       >
 
         {playing ? (
-          <Volume2 size={24} />
+          <Volume2 size={20} />
         ) : (
           <VolumeX size={24} />
         )}
